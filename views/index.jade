@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Benefacts Top 10 Charities
+
+  ul
+    each sector in sectors
+      li
+        a(href="topten/#{sector.url}") #{sector.name}

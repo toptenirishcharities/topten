@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    div.row
+        div.col-md-12
+            span.nav-item
+                a.small.pull-right(href="/") Home
+            h1#top Benefacts Top 10 Charities By All Income for 2014
+            p These are organisations that have registered with the&nbsp;
+                a(href="https://www.charitiesregulatoryauthority.ie/") Charities Regulatory Authority.
+
+    each sector in sectors
+        div.row
+            div.col-md-12
+
+                each subSector in sector.subSectors
+                    div.spacer
+                        h2 #{subSector.code} #{subSector.name || sector.name}
+                        table.table.table-striped.top-ten
+                            thead
+                                tr
+                                    td Charity Name
+                                    td Income (&euro;)
+                            tbody
+                                each org in subSector.sortedByIncome
+                                    tr
+                                        td
+                                            a(href="http://benefacts.ie/Org/#{org.document.id}" target="_blank") #{org.document.name}
+                                        td #{org.formattedIncome}
+
+    div.row.nav-item
+        div.col-md-12
+            span
+                a.small.pull-right(href="#top") Back to top
