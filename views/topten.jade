@@ -8,12 +8,14 @@ block content
             h1#top Benefacts Top 10 Charities By All Income for 2014
             p These are organisations that have registered with the&nbsp;
                 a(href="https://www.charitiesregulatoryauthority.ie/") Charities Regulatory Authority.
+            P.no-print
+                a(href="/export/" + sectors[0].code) Download as CSV
 
     each sector in sectors
         div.row
-            div.col-md-12
+            div.col-md-10
 
-                each subSector in sector.subSectors
+                each subSector, index in sector.subSectors
                     div.spacer
                         h2 #{subSector.code} #{subSector.name || sector.name}
                         table.table.table-striped.top-ten

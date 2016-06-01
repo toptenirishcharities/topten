@@ -171,8 +171,8 @@ var developmentSubSectors = [
         name: "Local development"
     },
     {
-        code: "6.Job creation",
-        name: ""
+        code: "6.2",
+        name: "Job creation"
     },
     {
         code: "6.3",
@@ -180,7 +180,7 @@ var developmentSubSectors = [
     },
     {
         code: "6.4",
-        name: "Sheltered Housing"
+        name: "Sheltered housing"
     },
     {
         code: "6.5",

@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var topten = require('./routes/topten');
 var users = require('./routes/users');
+var exp = require('./routes/export');
+
 
 
 var app = express();
@@ -25,6 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/export', exp);
 app.use('/topten', topten);
 app.use('/users', users);
 
