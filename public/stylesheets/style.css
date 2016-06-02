@@ -10,6 +10,8 @@ color: #1976d2;
 
 h1 {
     margin-bottom: 30px;
+    border-top: #00629b solid 5px;
+    padding-top: 10px;
 }
 
 h2 {
